@@ -25,7 +25,7 @@ def generate_bid_request():
     """Generate a realistic bid request."""
     return {
         'request_id': f'req_{random.randint(1000000, 9999999)}',
-        'timestamp': datetime.utcnow().isoformat(),
+        'timestamp': datetime.now(datetime.timezone.utc).isoformat(),
         'user_id': f'user_{random.randint(1, 100000)}',
         'publisher': random.choice(PUBLISHERS),
         'category': random.choice(CATEGORIES),
